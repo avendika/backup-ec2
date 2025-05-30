@@ -39,7 +39,7 @@ class UserController extends Controller
             'password' => 'required|string|min:6|confirmed',
             'avatar' => 'nullable|string',
             'custom_avatar' => 'nullable|boolean',
-            'avatar_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'avatar_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5048',
             'level' => 'nullable|integer|min:1',
             'score' => 'nullable|integer|min:0',
         ]);
@@ -97,7 +97,7 @@ class UserController extends Controller
             'username' => 'required|string|max:30|unique:users,username,' . $user->id,
             'avatar' => 'nullable|string',
             'custom_avatar' => 'nullable|boolean',
-            'avatar_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'avatar_file' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5048',
             'level' => 'nullable|integer|min:1',
             'score' => 'nullable|integer|min:0',
         ]);
